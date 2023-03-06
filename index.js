@@ -1,8 +1,9 @@
-// TODO: Include packages needed for this application
+
+// This section is variables that are using the npm inquirer
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./genmkd/generateMarkdown.js');
-// TODO: Create an array of questions for user input
+// Array of questions that will be prompted when running node index.js in the terminal
 const questions = [
 
     {
@@ -75,7 +76,7 @@ const questions = [
     },
 ];
 
-// TODO: Create a function to write README file
+// This function creates the readmefile
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
        if (err) {
@@ -88,7 +89,7 @@ function writeToFile(fileName, data) {
 }
   
 
-// TODO: Create a function to initialize app
+// This function displays the prompts, and once each answer is given, a readme will be written using writeToFile
 function init() {
     inquirer.prompt(questions) 
       .then((data) => {
