@@ -53,7 +53,8 @@ function renderLicenseBadge(license) {
     const tableOfContents = data.tableOfContents
       ? data.tableOfContents.split(",").map((item) => `-${item.trim()}`).join('\n') : "n/a";
     
-      return `# ${data.title}
+    return `
+    ## ${data.title}
     ${licenseBadge}
   
     ## Description
@@ -80,8 +81,7 @@ function renderLicenseBadge(license) {
     ${data.test}
   
     ## Questions
-    If you have any further questions, feel free to reach out to me at ${data.email}. You can also view my Github profile for all of my projects : ${data.github}.
-  `;
+    If you have any further questions, feel free to reach out to me at ${data.email}. You can also view my Github profile for all of my projects : ${data.github}.`;
   }
   
   module.exports = generateMarkdown;
