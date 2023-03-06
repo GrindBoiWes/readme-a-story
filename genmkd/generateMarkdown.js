@@ -54,34 +54,36 @@ function renderLicenseBadge(license) {
       ? data.tableOfContents.split(",").map((item) => `-${item.trim()}`).join('\n') : "n/a";
     
     return `
-    ## ${data.title}
-    ${licenseBadge}
+## ${data.title}
+${licenseBadge}
   
-    ## Description
-    ${data.description}
+## Description
+${data.description}
   
-    ## Table of Contents
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contributions](#contributions)
-    * [Tests](#tests)
-    * [Questions](#questions)
+## Table of Contents
+ * [Installation](#installation)
+ * [Usage](#usage)
+ * [License](#license)
+ * [Contributions](#contributions)
+ * [Tests](#tests)
+ * [Questions](#questions)
     
-    ## Installation
-    ${data.installation}
+## Installation
+${data.installation}
   
-    ## Usage 
-    ${data.usage}
+## Usage 
+${data.usage}
+
+${licenseSection}
   
-    ## Contributions
-    ${data.contributions}
+## Contributions
+${data.contributions}
   
-    ## Test
-    ${data.test}
+## Test
+${data.test}
   
-    ## Questions
-    If you have any further questions, feel free to reach out to me at ${data.email}. You can also view my Github profile for all of my projects : ${data.github}.`;
-  }
+## Questions
+If you have any further questions, feel free to reach out to me at ${data.email}. You can also view my Github profile for all of my projects : ${data.github}.`;
+}
   
   module.exports = generateMarkdown;
