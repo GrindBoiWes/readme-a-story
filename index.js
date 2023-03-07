@@ -76,7 +76,7 @@ const questions = [
     },
 ];
 
-// This function creates the readmefile
+// The section is writing the contents from the data provided
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
        if (err) {
@@ -89,7 +89,7 @@ function writeToFile(fileName, data) {
 }
   
 
-// This function displays the prompts, and once each answer is given, a readme will be written using writeToFile
+// This section generates the readme to the repo using writeToFile
 function init() {
     inquirer.prompt(questions) 
       .then((data) => {

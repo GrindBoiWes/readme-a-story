@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
     }
   };
   
-  // This function will get the response from the license question, and then return the correct response.
+  // This function will get the response from the rendeLicenseBadge, and then return the correct response.
   function renderLicenseLink(license) {
     if (license === 'MIT') {
         return 'MIT';
@@ -28,7 +28,7 @@ function renderLicenseBadge(license) {
      }
   };
   
-  // This function will render the license from the selected information.
+  // This function will render the license section of the readme from the selected information.
   function renderLicenseSection(license) {
     if (license) {
       return `
@@ -71,6 +71,7 @@ ${data.installation}
 ## Usage 
 ${data.usage}
 
+## License
 ${licenseSection}
   
 ## Contributions
